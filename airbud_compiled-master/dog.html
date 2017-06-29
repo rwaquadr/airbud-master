@@ -2,6 +2,22 @@
 <html>
 <head>
 <title>User Profile</title>
+
+<style>
+      /* Always set the map height explicitly to define the size of the div
+       * element that contains the map. */
+      #map {
+        height: 350px;
+      }
+      /* Optional: Makes the sample page fill the window. */
+      html, body {
+        height: 200px;
+        padding: 0;
+      }
+    </style>
+
+
+
 <!-- Font Awesome CDN -->
 <script src="https://use.fontawesome.com/ddc66602f4.js"></script>
 <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
@@ -271,6 +287,28 @@
     <!-- END OF REVIEWS -->
     </div>
 </div>
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="js/bootstrap.min.js"></script>
+
+    <!-- MAP -->
+ <div id="map"></div>
+    <script>
+      var map;
+      function initMap() {
+        map = new google.maps.Map(document.getElementById('map'), {
+          center: {lat: 29.93478, lng: -90.120882},
+          zoom: 15
+        });
+      }
+    </script>
+<!--  -->
+
+<!-- Google Maps JS API -->
+<script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyB0VwoY5o9xaku4nl4Dr5PjCDxWgtFbbwk&callback=initMap" />
+
+<script type="text/javascript" src="kr-airbud.js"></script>
     <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
     <!-- Include all compiled plugins (below), or include individual files as needed -->
